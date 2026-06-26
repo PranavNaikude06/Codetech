@@ -1,0 +1,15 @@
+.canvasContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #020617;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--color-border-glass);
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
