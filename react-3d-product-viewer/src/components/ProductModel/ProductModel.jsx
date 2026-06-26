@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 
-const ProductModel = ({ id, color, modelPath }) => {
+const ProductModel = ({ id, color }) => {
   const meshRef = useRef();
 
   // Auto-rotate the model slightly
