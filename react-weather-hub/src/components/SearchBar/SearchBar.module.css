@@ -1,0 +1,110 @@
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-4) var(--spacing-12) var(--spacing-4) var(--spacing-6);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-glass);
+  transition: all var(--transition-base);
+}
+
+.input:focus {
+  outline: none;
+  background: var(--color-surface-glass-hover);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow-violet), var(--shadow-glass);
+}
+
+.inputError {
+  border-color: var(--color-error);
+}
+
+.inputError:focus {
+  border-color: var(--color-error);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.25), var(--shadow-glass);
+}
+
+.button {
+  position: absolute;
+  right: var(--spacing-2);
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-glow-violet);
+}
+
+.button:hover {
+  background: var(--color-primary-hover);
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.errorText {
+  font-size: var(--font-size-sm);
+  color: #fca5a5;
+  font-weight: 500;
+  padding-left: var(--spacing-4);
+  animation: slideIn 200ms ease-out;
+}
+
+[data-theme="light"] .errorText {
+  color: var(--color-error);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
