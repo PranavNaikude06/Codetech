@@ -1,0 +1,224 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.stepsIcon {
+  background: linear-gradient(135deg, var(--color-info) 0%, var(--color-info-hover) 100%);
+  box-shadow: 0 4px 15px var(--color-info-glow);
+}
+
+.caloriesIcon {
+  background: linear-gradient(135deg, var(--color-danger) 0%, var(--color-danger-hover) 100%);
+  box-shadow: 0 4px 15px var(--color-danger-glow);
+}
+
+.activeIcon {
+  background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-hover) 100%);
+  box-shadow: 0 4px 15px var(--color-success-glow);
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardValueContainer {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-2);
+  min-height: 42px;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.goal {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.stepsDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-2);
+  width: 100%;
+}
+
+.editBtn {
+  background: transparent;
+  color: var(--color-text-muted);
+  padding: var(--spacing-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  margin-left: auto;
+}
+
+.editBtn:hover {
+  color: var(--color-info);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.editStepsForm {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+}
+
+.stepsInput {
+  flex: 1;
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  height: 32px;
+}
+
+.saveStepsBtn {
+  background: var(--color-success);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.saveStepsBtn:hover {
+  background: var(--color-success-hover);
+}
+
+.progressBarWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: var(--shadow-inset);
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stepsFill {
+  background: var(--color-info);
+  box-shadow: 0 0 8px var(--color-info-glow);
+}
+
+.caloriesFill {
+  background: var(--color-danger);
+  box-shadow: 0 0 8px var(--color-danger-glow);
+}
+
+.activeFill {
+  background: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success-glow);
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.quickAdd {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: auto;
+}
+
+.quickAdd button {
+  flex: 1;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-glass);
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: var(--spacing-2);
+  transition: all var(--transition-fast);
+}
+
+.quickAdd button:hover {
+  background: var(--color-surface-glass-hover);
+  color: var(--color-info);
+  border-color: var(--color-info-glow);
+}
+
+.cardHint {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-top: auto;
+}
