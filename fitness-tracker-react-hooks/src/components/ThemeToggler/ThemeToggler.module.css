@@ -1,0 +1,70 @@
+.toggler {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border-glass);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-glass);
+  transition: all var(--transition-base);
+}
+
+.toggler:hover {
+  background: var(--color-surface-glass-hover);
+  border-color: var(--color-border-glass-focus);
+  transform: translateY(-2px);
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunIcon {
+  color: var(--color-warning);
+  animation: rotateSun 20s infinite linear;
+}
+
+.moonIcon {
+  color: var(--color-purple);
+  animation: pulseMoon 3s infinite ease-in-out;
+}
+
+@keyframes rotateSun {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseMoon {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(15deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -40px;
+  background: var(--color-tooltip-bg);
+  color: var(--color-tooltip-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+
+.toggler:hover .tooltip {
+  opacity: 0.9;
+  transform: translateY(0);
+}
