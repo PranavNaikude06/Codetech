@@ -43,3 +43,7 @@ Thumbs.db
 # Optional: coverage reports (if testing is added)
 coverage/
 .nyc_output/
+
+# Internship Context/PRD
+CODTECH_Context*
+CODTECH_PRD*
