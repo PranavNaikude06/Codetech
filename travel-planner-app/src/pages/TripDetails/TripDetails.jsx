@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { 
-  ArrowLeft, Edit2, Check, X, Calendar, 
+  ArrowLeft, Edit2, X, Calendar, 
   DollarSign, ClipboardList, Map, Notebook, Save 
 } from 'lucide-react';
 import { useTravel } from '../../context/TravelContext';
@@ -12,7 +12,6 @@ import styles from './TripDetails.module.css';
 
 export default function TripDetails() {
   const { tripId } = useParams();
-  const navigate = useNavigate();
   const { 
     trips, updateTrip, 
     addDestination, deleteDestination,
