@@ -1,0 +1,128 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 1.5rem auto;
+  width: 90%;
+  max-width: 1200px;
+  position: sticky;
+  top: 1.5rem;
+  z-index: 1000;
+  border-radius: var(--border-radius-lg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent-primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logoIcon {
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logoText {
+  color: var(--text-primary);
+}
+
+.statsContainer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-glass);
+}
+
+[data-theme='light'] .statItem {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.statIcon {
+  color: var(--text-muted);
+}
+
+.statLabel {
+  color: var(--text-muted);
+}
+
+.statVal {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background var(--transition-fast);
+}
+
+[data-theme='light'] .themeToggle {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.themeToggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] .themeToggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.toggleIcon {
+  transition: color var(--transition-fast);
+}
+
+/* Mobile responsive navigation styles */
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+    padding: 0.75rem 1.25rem;
+    margin: 1rem auto;
+    top: 1rem;
+  }
+
+  .logoText {
+    display: none;
+  }
+
+  .statsContainer {
+    gap: 0.5rem;
+  }
+
+  .statItem {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
