@@ -1,0 +1,324 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  align-self: flex-start;
+}
+
+.backLink:hover {
+  color: var(--accent-primary);
+}
+
+.coverBanner {
+  height: 180px;
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem 2rem;
+}
+
+.emojiBadge {
+  font-size: 3.5rem;
+  width: 90px;
+  height: 90px;
+  background: var(--bg-glass-solid);
+  border: 1.5px solid var(--border-glass);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -35px;
+  left: 2.5rem;
+  box-shadow: var(--glass-shadow);
+  z-index: 2;
+}
+
+.editBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--bg-glass-solid);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.editBtn:hover {
+  background: var(--bg-glass-hover);
+  transform: translateY(-1px);
+}
+
+/* Header Content Card */
+.headerCard {
+  padding: 3rem 2.5rem 2rem 2.5rem;
+  margin-top: 1rem;
+}
+
+.headerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tripTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.headerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.headerInfoBlock {
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.headerIcon {
+  color: var(--accent-primary);
+  margin-top: 0.2rem;
+}
+
+.blockLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.blockValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.notesBlock {
+  grid-column: 1 / -1;
+  border-top: 1px dashed var(--border-glass);
+  padding-top: 1.25rem;
+}
+
+.blockValueNotes {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+
+/* Edit Form */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.colorPaletteGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.colorSwatch {
+  height: 36px;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.colorSwatch:hover {
+  transform: scale(1.08);
+}
+
+.colorSwatchActive {
+  border-color: var(--text-primary);
+}
+
+.emojiGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.4rem;
+}
+
+.emojiButton {
+  font-size: 1.25rem;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+[data-theme='light'] .emojiButton {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.emojiButton:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.emojiButtonActive {
+  background: rgba(var(--accent-primary-rgb), 0.2) !important;
+  border-color: var(--accent-primary);
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-glass);
+  padding-top: 1.25rem;
+}
+
+.cancelBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-glass);
+  transition: background var(--transition-fast);
+}
+
+.cancelBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+[data-theme='light'] .cancelBtn:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Tab Navigation */
+.tabNav {
+  display: flex;
+  padding: 0.35rem;
+  border-radius: var(--border-radius-md);
+  margin-top: 1rem;
+}
+
+.tabBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: var(--border-radius-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  background: transparent;
+}
+
+.tabBtn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='light'] .tabBtn:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.tabBtnActive {
+  background: var(--accent-primary) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(var(--accent-primary-rgb), 0.2);
+}
+
+.tabContent {
+  margin-top: 1rem;
+}
+
+/* Responsive breakdowns */
+@media (max-width: 900px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .emojiGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerCard {
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .tripTitle {
+    font-size: 1.75rem;
+  }
+
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .tabNav {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .tabBtn {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
