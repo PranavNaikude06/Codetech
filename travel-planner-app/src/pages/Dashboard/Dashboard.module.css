@@ -1,0 +1,540 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Stats overview cards banner */
+.statsOverview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.overviewCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.cardIconTeal {
+  color: var(--accent-primary);
+}
+
+.cardIconGold {
+  color: var(--accent-warning);
+}
+
+.cardIconBlue {
+  color: var(--accent-info);
+}
+
+.cardValue {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.cardSubtext {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Controls (Search / Sort / Add) */
+.controlBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-sm);
+  padding: 0.2rem 0.8rem;
+  height: 46px;
+}
+
+[data-theme='light'] .searchWrapper {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.searchIcon {
+  color: var(--text-muted);
+}
+
+.searchInput {
+  width: 100%;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.filtersWrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sortSelectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-sm);
+  padding: 0 0.8rem;
+  height: 46px;
+}
+
+[data-theme='light'] .sortSelectWrapper {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.sortIcon {
+  color: var(--text-muted);
+}
+
+.sortSelect {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: transparent;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+.sortSelect option {
+  background: var(--bg-glass-solid);
+  color: var(--text-primary);
+}
+
+/* Trips Grid System */
+.tripsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.tripCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+}
+
+.tripCardCover {
+  height: 120px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.emojiBadge {
+  font-size: 2.25rem;
+  width: 60px;
+  height: 60px;
+  background: var(--bg-glass-solid);
+  border: 1.5px solid var(--border-glass);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -20px;
+  left: 1.5rem;
+  box-shadow: var(--glass-shadow);
+  z-index: 2;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius-full);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fca5a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.deleteButton:hover {
+  background: rgba(225, 29, 72, 0.9);
+  color: white;
+  transform: scale(1.05);
+}
+
+.tripCardContent {
+  padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.tripTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tripDateRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.tripCardIcon {
+  color: var(--text-muted);
+}
+
+.metricSection {
+  margin-bottom: 0.75rem;
+}
+
+.metricHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.metricLabel {
+  color: var(--text-muted);
+}
+
+.metricVal {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.progressBarBg {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+[data-theme='light'] .progressBarBg {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--accent-success);
+  border-radius: var(--border-radius-full);
+  transition: width 0.4s ease;
+}
+
+.progressBarFillBlue {
+  height: 100%;
+  background: var(--accent-primary);
+  border-radius: var(--border-radius-full);
+  transition: width 0.4s ease;
+}
+
+.barDanger {
+  background: var(--accent-danger);
+}
+
+.manageBtn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.65rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  text-align: center;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+[data-theme='light'] .manageBtn {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.manageBtn:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+/* Empty State Card */
+.emptyState {
+  grid-column: 1 / -1;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  animation: bounce 2s infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.emptyState h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.emptyState p {
+  color: var(--text-muted);
+  max-width: 400px;
+}
+
+/* Modal Overlay & Forms */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 13, 22, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  background: var(--bg-glass-solid);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.75rem;
+}
+
+.modalHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.closeBtn {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  color: var(--text-primary);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modalLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Color palettes & Emojis grids */
+.colorPaletteGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.colorSwatch {
+  height: 40px;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.colorSwatch:hover {
+  transform: scale(1.08);
+}
+
+.colorSwatchActive {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 10px rgba(var(--accent-primary-rgb), 0.4);
+}
+
+.emojiGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.emojiButton {
+  font-size: 1.5rem;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+[data-theme='light'] .emojiButton {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.emojiButton:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.emojiButtonActive {
+  background: rgba(var(--accent-primary-rgb), 0.2) !important;
+  border-color: var(--accent-primary);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancelBtn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-glass);
+  transition: background var(--transition-fast);
+}
+
+.cancelBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+[data-theme='light'] .cancelBtn:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 1024px) {
+  .tripsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsOverview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .controlBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .searchWrapper {
+    max-width: none;
+  }
+
+  .filtersWrapper {
+    justify-content: space-between;
+  }
+
+  .tripsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tripCard {
+    height: 390px;
+  }
+}
