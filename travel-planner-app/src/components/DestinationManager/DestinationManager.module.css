@@ -1,0 +1,183 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.formCard {
+  padding: 1.5rem;
+}
+
+.subHeading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.5rem;
+}
+
+.headerIcon {
+  color: var(--accent-primary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Timeline component styling */
+.timelineWrapper {
+  position: relative;
+  min-height: 200px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 20px;
+}
+
+.markerDot {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--border-radius-full);
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-glass-solid);
+  z-index: 5;
+  box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.2);
+}
+
+.markerLine {
+  width: 2px;
+  background: var(--border-glass);
+  flex-grow: 1;
+  position: absolute;
+  top: 14px;
+  bottom: -28px;
+  z-index: 1;
+}
+
+.timelineContent {
+  flex-grow: 1;
+  padding: 1rem 1.25rem;
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.destName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.deleteBtn {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  padding: 0.2rem;
+  border-radius: var(--border-radius-sm);
+  background: transparent;
+}
+
+.deleteBtn:hover {
+  color: var(--accent-danger);
+  background: rgba(244, 63, 94, 0.08);
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.notesText {
+  display: flex;
+  align-items: start;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius-sm);
+  margin-top: 0.75rem;
+  border: 1px dashed var(--border-glass);
+}
+
+.notesIcon {
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.emptyTimeline {
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+}
+
+.emptyTimeline p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
