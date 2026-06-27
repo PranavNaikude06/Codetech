@@ -1,0 +1,76 @@
+:root {
+  /* Typography & Transitions */
+  --font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border Radii */
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+
+  /* Light Theme Colors (Default) */
+  --bg-app: linear-gradient(135deg, #eef2f6 0%, #d4e0e9 100%);
+  --bg-glass: rgba(255, 255, 255, 0.45);
+  --bg-glass-hover: rgba(255, 255, 255, 0.65);
+  --bg-glass-solid: rgba(255, 255, 255, 0.85);
+  --border-glass: rgba(255, 255, 255, 0.35);
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  
+  --accent-primary: #0f766e; /* Deep Teal */
+  --accent-primary-hover: #115e59;
+  --accent-primary-rgb: 15, 118, 110;
+  
+  --accent-secondary: #e0f2fe; /* Sky light blue background */
+  --accent-secondary-text: #0369a1;
+  
+  --accent-success: #059669; /* Emerald */
+  --accent-success-light: #d1fae5;
+  --accent-danger: #e11d48; /* Rose */
+  --accent-danger-light: #ffe4e6;
+  --accent-warning: #d97706; /* Amber */
+  --accent-warning-light: #fef3c7;
+  --accent-info: #4f46e5; /* Indigo */
+  --accent-info-light: #e0e7ff;
+
+  --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.06);
+  --glass-blur: blur(16px);
+  --card-glow: rgba(15, 118, 110, 0.05);
+}
+
+[data-theme='dark'] {
+  /* Dark Theme Colors */
+  --bg-app: linear-gradient(135deg, #090d16 0%, #111827 100%);
+  --bg-glass: rgba(17, 24, 39, 0.45);
+  --bg-glass-hover: rgba(17, 24, 39, 0.65);
+  --bg-glass-solid: rgba(17, 24, 39, 0.85);
+  --border-glass: rgba(255, 255, 255, 0.07);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  
+  --accent-primary: #2dd4bf; /* Bright Teal */
+  --accent-primary-hover: #5eead4;
+  --accent-primary-rgb: 45, 212, 191;
+  
+  --accent-secondary: #132b35;
+  --accent-secondary-text: #38bdf8;
+  
+  --accent-success: #10b981;
+  --accent-success-light: rgba(16, 185, 129, 0.15);
+  --accent-danger: #f43f5e;
+  --accent-danger-light: rgba(244, 63, 94, 0.15);
+  --accent-warning: #fbbf24;
+  --accent-warning-light: rgba(251, 191, 36, 0.15);
+  --accent-info: #6366f1;
+  --accent-info-light: rgba(99, 102, 241, 0.15);
+
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(20px);
+  --card-glow: rgba(45, 212, 191, 0.08);
+}
